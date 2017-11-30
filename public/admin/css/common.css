@@ -24,6 +24,10 @@ a:link, a:visited, a:hover, a:active {
 .mt_150 {
     margin-top: 150px;
 }
+
+.mb_20 {
+    margin-bottom: 20px;
+}
 .panel h4 {
     text-align: center;
 }
@@ -137,3 +141,10 @@ a:link, a:visited, a:hover, a:active {
     /* background-color:lightblue; */
 }
 /* 首页样式结束 */
+
+/* 首页用户页样式开始 */
+.table.table-bordered td {
+    text-align: center;
+    vertical-align: middle
+}
+/* 首页用户页样式结束 */

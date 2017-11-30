@@ -12,7 +12,7 @@ $(document).ajaxStop(function() {
   //结束进度条
   setTimeout(function() {
     NProgress.done();
-  }, 3000);
+  }, 500);
 });
 
 //实现左侧侧边栏二级分类的显示与隐藏
