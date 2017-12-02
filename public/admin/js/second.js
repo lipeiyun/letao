@@ -121,34 +121,5 @@ $(function() {
   });
 
   //给表单注册校验成功事件
-  $form.on("success.form.bv", function(e) {
-    e.preventDefault();
-
-    //发送ajax
-    $.ajax({
-      type: "post",
-      url: "/category/addSecondCategory",
-      data: $form.serialize(),
-      success: function(data) {
-        if (data.success) {
-          //成功了
-          //1. 关闭模态框
-          $("#secondModal").modal("hide");
-          //2. 重新渲染第一页
-          nowPage = 1;
-          render();
-
-          //3. 重置内容和样式
-          $form[0].reset();
-          $form.data("bootstrapValidator").resetForm();
-
-          //4. 重置下拉框组件和图片
-          $(".dropdown-text").text("请选择一级分类");
-          $("[name='categoryId']").val("");
-          $(".img_box img").attr("src", "images/none.png");
-          $("[name='brandLogo']").val("");
-        }
-      }
-    });
-  });
+   
 });
