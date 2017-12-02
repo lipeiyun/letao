@@ -1,136 +1,153 @@
-@charset "utf-8";
-html,body{
-    height: 100%;
-}
-
+/* 公共样式  S */
 * {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
 }
 a {
-    text-decoration: none;
-}
-  
-a:link, a:visited, a:hover, a:active {
-    text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-/* 登录样式开始 */
-.bg_body {
-    background-color:#222d32;
+a:link,a:visited,a:hover,a:active {
+  text-decoration: none;
+  cursor: pointer;
 }
+html,body {
+  height: 100%;
+  width: 100%;
+}
+
+.bg_body {
+  background-color: #222D32;
+  height: 100%;
+  width: 100%;
+}
+
 .mt_150 {
-    margin-top: 150px;
+  margin-top: 150px;
+}
+
+.mt_20 {
+  margin-top: 20px;
 }
 
 .mb_20 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
+
+ml_20 {
+  margin-left: 20px;
+}
+/* 公共样式  E */
+
+
 .panel h4 {
-    text-align: center;
-}
-/* 登录样式结束 */
+  text-align: center;
+} 
 
 /* 首页样式开始 */
 .lt_aside {
-    width: 180px;
-    height:100%;
-    background-color: #222D32;
-    position: absolute;
-    top:0;
-    left:0;
-    transition:all 1s;
+  width: 180px;
+  height: 100%;
+  background-color: #222D32;
+  position: fixed;
+  top:0;
+  left:0;
+  transition:all 0.5s;
 }
 
 .lt_aside.now {
-    left: -180px;
-}
-.brand {
-    width: 180px;
-    height: 50px;
-    background-color: #367FA9;
-    line-height: 50px;
-} 
-
-.brand a {
-    display: block;
-    text-align: center;
-    color: #fff;
-    font-size: 24px;
+  left:-180px;
 }
 
-.user {
-    width: 180px;
-    height: 150px;
+.lt_aside > .title {
+  width: 180px;
+  height: 50px;
+  background-color: #367FA9;
+  line-height: 50px;
 }
 
-.user img {
-    width: 80px;
-    height: 80px;
-    display: block;
-    border-radius: 50%;
-    margin: 30px auto 0;
-}
-.user p {
-    height: 40px;
-    line-height: 40px;
-    color: #fff;
-    text-align: center;
-    font-size: 16px;
-
+.lt_aside > .title > a > p {
+  font-size: 24px;
+  text-align:center;
+  color: #fff;
 }
 
-.nav li a {
-    width: 180px;
-    height: 40px;
-    line-height: 34px;
-    display: block;
-    color: #fff;
-    padding-left: 30px;
-    border: 3px solid transparent;
+.lt_aside > .user {
+  width: 180px;
+  height: 150px;
+  /* background-color:pink; */
 }
 
-/* 选中的样式 */
+.lt_aside > .user > .imgBox{
+  height: 130px;
+  width:180px;
+  text-align: center;
+  /* background-color:skyblue; */
+}
+
+.lt_aside > .user > .imgBox img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.lt_aside .aname p{
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  height: 30px;
+  padding-bottom: 20px;
+}
+
+.lt_aside ul{
+  padding-top:30px; 
+}
+
+.lt_aside .nav li a {
+  width: 180px;
+  height: 40px;
+  line-height: 34px;
+  display: block;
+  color: #ccc;
+  padding-left: 30px;
+  border: 3px solid transparent;
+}
+
+/* 被选中的样式 S */
 .lt_aside .nav li a.now {
-    background-color: #1d1f21;
-    color: #fff;
-    border-left-color: #069;
-  }
+  border-left-color: #069;
+  background-color: #1d1f21;
+  color: #fff;
+}
+/* 被选中的样式 E */
 
 .lt_aside .nav .child a{
-    padding-left: 50px;
+  padding-left: 50px;
 }
 
-/* 右侧开始 */
-
 .lt_main {
-    height: 100%;
-    width: 100%;
-    padding-left: 180px;
-    transition:all 1s;
+  padding-left: 180px;
+  transition:all .5s;
 }
 
 .lt_main.now {
-    padding-left: 0;
+  padding-left: 0;
 }
 
-.topbar {
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    background-color: #3c8dbc;;
-    padding: 0 20px;
+.lt_main .topbar {
+  height: 50px;
+  
+  background-color: #3C8DBC;
+  line-height: 50px;
 }
 
-.topbar a {
-    color: #fff;
-    font-size: 18px;
-}
-
-.lt_main .breadcrumb {
-    margin-top: 20px;
+.lt_main .topbar a {
+  color: #fff;
+  padding:0 20px;
+  font-size: 16px;
 }
 
 
@@ -142,9 +159,22 @@ a:link, a:visited, a:hover, a:active {
 }
 /* 首页样式结束 */
 
-/* 首页用户页样式开始 */
-.table.table-bordered td {
+/* 用户页面 S */
+.table .table-bordered td {
     text-align: center;
-    vertical-align: middle
+    vertical-align: middle;
 }
-/* 首页用户页样式结束 */
+/* 用户页面 E */
+
+.fileupload_box{
+  position: relative;
+  top:0;
+  left:0;
+}
+
+#fileupload {
+  position: absolute;
+  top:0;
+  left:0;
+  opacity: 0;
+}
